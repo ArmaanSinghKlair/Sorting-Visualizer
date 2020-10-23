@@ -9,6 +9,18 @@
   --main-button-color: #007bff;
 }
 
+@media (max-width: 1400px) {
+  .HeaderMenu {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .HeaderMenu > * {
+    margin: 1vmax 0;
+  }
+}
+
 .HeaderMenu {
   border-bottom: solid 1px lightgray;
   font-size: 15px;

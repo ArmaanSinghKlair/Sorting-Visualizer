@@ -7,6 +7,16 @@
     --main-button-color: #007bff;
 }
 
+@media (max-width: 1400px){
+    .HeaderMenu{
+        flex-direction: column !important;
+
+        & >*{
+            margin: 1vmax 0;
+        }
+    } 
+}
+
 .HeaderMenu{
     border-bottom: solid 1px lightgray;
     font-size: 15px;

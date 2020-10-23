@@ -4,8 +4,14 @@ import SortingVisualizer from './SortingVisualizer';
 function App() {
   return (
     <>
-     <SortingVisualizer />
-     </>
+      {
+      window.innerWidth > 500 ?
+      <SortingVisualizer />
+      : (
+        <h1 style={{textAlign: "center"}}>Screen size too small!! Please open in a bigger Screen</h1>
+      )
+      }
+    </>
   );
 }
 

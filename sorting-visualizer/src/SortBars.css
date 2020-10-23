@@ -1,5 +1,8 @@
 .SortBars {
   width: 95%;
   margin: 1vmax auto;
+  text-align: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=SortBars.css.map */

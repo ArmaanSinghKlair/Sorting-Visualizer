@@ -1,21 +1,28 @@
-import React ,{useState, useEffect} from 'react'
-import Bar from './Bar';
+import React ,{useState, useEffect, useRef} from 'react'
+import Bar from './Bar'
 import './SortBars.css'
-function SortBars({maxBars}) {
-    const [curArray, setCurArray] = useState([]);
-    const [barWidth, setBarWidth] = useState()
+import resetArray from './resetArray'
+
+function SortBars({maxBars, curArray, setCurArray,animations, barWidth, setBarWidth}) {
+    
   
-    useEffect(()=>{
-        setCurArray(resetArray(10, Math.floor(window.innerHeight*0.8), 5 ))
-        setBarWidth((window.innerWidth*0.9-4*10)/10)
-    },[])
+
 
     useEffect(()=>{
         setCurArray(resetArray(maxBars, Math.floor(window.innerHeight*0.8), 5 ))
         setBarWidth((window.innerWidth*0.9-4*maxBars)/maxBars)
     },[maxBars])
 
+    useEffect(()=>{        
 
+      if(animations.current.length > 0){
+        let cur = animations.current.shift()
+        setTimeout(setCurArray(cur))  
+      } 
+    })
+
+    
+    //;
 
     return (
         <div className="SortBars">
@@ -28,13 +35,5 @@ function SortBars({maxBars}) {
     )
 }
 
-function resetArray(maxBars, maxSize, minSize){
-    let arr = [];
-    
-    for(let i=0; i<maxBars; i++){
-        arr.push( Math.floor(Math.random()* (maxSize-minSize)) + minSize );
-    }
 
-    return arr;
-}
-export default React.memo(SortBars);
+export default React.memo(SortBars)

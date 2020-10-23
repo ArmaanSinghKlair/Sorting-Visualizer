@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,UAAU;CAErB",
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,UAAU;EAClB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,cAAc;CAC5B",
     "sources": [
         "SortBars.scss"
     ],
