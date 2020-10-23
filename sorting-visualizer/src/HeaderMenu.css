@@ -1,0 +1,58 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-button-color: #007bff;
+}
+
+.HeaderMenu {
+  border-bottom: solid 1px lightgray;
+  font-size: 15px;
+  padding: 3vmin 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HeaderMenu button {
+  background-color: var(--main-button-color);
+  padding: 1vmin 1vmax;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin: 0 1vmin;
+}
+
+.HeaderMenu .funcButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HeaderMenu .funcButton .maxBars {
+  margin: 0 0.5vmin;
+  background-color: #f0f0f0;
+  min-width: 50px;
+  text-align: center;
+  padding: 0 1vmin;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=HeaderMenu.css.map */

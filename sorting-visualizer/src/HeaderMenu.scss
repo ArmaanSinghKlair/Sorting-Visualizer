@@ -1,0 +1,42 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --main-button-color: #007bff;
+}
+
+.HeaderMenu{
+    border-bottom: solid 1px lightgray;
+    font-size: 15px;
+    padding: 3vmin 15%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    button{
+        background-color: var(--main-button-color);
+        padding: 1vmin 1vmax;
+        color: white;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        margin: 0 1vmin;
+    }
+
+    .funcButton{
+        display: flex;
+        align-items: center;
+
+        .maxBars{
+            margin: 0 0.5vmin;
+            background-color: rgb(240,240,240);
+            min-width: 50px;
+            text-align: center;
+            padding: 0 1vmin;
+            border-radius: 5px;
+        }
+    }
+}
