@@ -3,7 +3,7 @@ import Bar from './Bar'
 import './SortBars.css'
 import resetArray from './resetArray'
 
-function SortBars({maxBars, curArray, setCurArray,animations, barWidth, setBarWidth}) {
+function SortBars({maxBars, curArray, setCurArray,animations, barWidth, setBarWidth, speed, setSpeed}) {
     
   
 
@@ -17,7 +17,8 @@ function SortBars({maxBars, curArray, setCurArray,animations, barWidth, setBarWi
 
       if(animations.current.length > 0){
         let cur = animations.current.shift()
-        setTimeout(setCurArray(cur))  
+        setTimeout(()=>setCurArray(cur),(10-speed)*10) 
+        //setCurArray(cur) 
       } 
     })
 

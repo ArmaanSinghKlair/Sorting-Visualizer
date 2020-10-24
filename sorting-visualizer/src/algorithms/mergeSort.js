@@ -14,23 +14,30 @@ export default function mergeSort(arr, l, r, animations){
 }
 
 function merge(arr, l, mid, r, sliced, animations){
-    animations.current.push(new Array(...arr))
+    //animations.current.push(new Array(...arr))
 
     let i=0
     let k=0
     let j=mid-l+1
     while(i <= mid-l && j <= r-l){
+        //animations.current.push(new Array(...arr))
+
         if( sliced[i] > sliced[j]){
             arr[l+k++] = sliced[i++]
+            //animations.current.push(new Array(...arr))
+
           
         } else{
             arr[l+k++] = sliced[j++]
+           // animations.current.push(new Array(...arr))
+
           
         }
-        animations.current.push(new Array(...arr))
+        //animations.current.push(new Array(...arr))
 
     }
 
+   // animations.current.push(new Array(...arr))
 
     while(i<=mid-l) arr[l+k++]= sliced[i++]
     while(j<=r-l) arr[l+k++]= sliced[j++]

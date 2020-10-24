@@ -26,6 +26,11 @@
     justify-content: space-between;
     align-items: center;
     
+   
+    .ranges{
+        display: flex;
+        flex-direction: column;
+    }
     button{
         background-color: var(--main-button-color);
         padding: 1vmin 1vmax;
@@ -40,13 +45,16 @@
         display: flex;
         align-items: center;
 
-        .maxBars{
+        .parameters{
             margin: 0 0.5vmin;
             background-color: rgb(240,240,240);
             min-width: 50px;
             text-align: center;
             padding: 0 1vmin;
             border-radius: 5px;
+            display: flex;
+            flex-flow: column wrap;
         }
     }
 }
+

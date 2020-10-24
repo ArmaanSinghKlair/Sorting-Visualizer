@@ -5,7 +5,7 @@ import selectionSort from './algorithms/selectionSort'
 import bubbleSort from './algorithms/bubbleSort'
 import resetArray from './resetArray'
 
-export default function HeaderMenu({setMaxBars,maxBars, curArray, setCurArray,animations, barWidth, setBarWidth}) {
+export default function HeaderMenu({setMaxBars,maxBars, curArray, setCurArray,animations, barWidth, setBarWidth, speed, setSpeed}) {
     const merge = ()=>{
         mergeSort(curArray, 0, curArray.length-1, animations); 
         setCurArray(animations.current[4])
@@ -33,9 +33,13 @@ export default function HeaderMenu({setMaxBars,maxBars, curArray, setCurArray,an
 
             <div className="funcButton">
                 <button id="createNewArray" onClick={initArray}>Generate New Array</button>
-                <input type="range" min="5" max="300" onChange={(e)=>setMaxBars((prev)=>e.target.value)}/>
-                <div class="maxBars">
-                    {maxBars}
+                <div className="ranges">
+                    <input type="range" min="5" max="300" onChange={(e)=>setMaxBars((prev)=>e.target.value)}/>
+                    <input type="range" min="1" max="9" onChange={(e)=>setSpeed((prev)=>e.target.value)}/> 
+                </div>
+                <div class="parameters">
+                    <span>Size: {maxBars}</span>
+                    <span>Speed: {speed}</span>
                 </div>
             </div>
             <div className="algorithmButton">

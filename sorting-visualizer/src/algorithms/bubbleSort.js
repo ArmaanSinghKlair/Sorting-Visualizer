@@ -6,6 +6,8 @@ export default function bubbleSort(arr, animations){
         animations.current.push(new Array(...arr))
 
         for(let j = 0; j < arr.length-i; j++){
+            animations.current.push(new Array(...arr))
+
             if(arr[j+1] > arr[j]) {
                 let tmp = arr[j]; 
                 arr[j] = arr[j+1];
